@@ -1,0 +1,23 @@
+Bitflow manual configuration steps
+==================================
+The following definitions are used in this document and should be substituted for the actual values:
+
+<installation folder> is the folder that the andor package was unzipped into.
+{32|64} 32 should be used if the OS is 32bit, 64 should be used if the OS is 64bit.
+
+The following lines should be added to your ~/.bashrc file or equivalent:
+
+export BITFLOW_INSTALL_DIRS=<installation folder>/andor/bitflow
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<installation folder>/andor/bitflow/{32|64}b/lib
+
+The following lines should be added to your /etc/rc.local file or equivalent:
+
+/sbin/modprobe v4l2_common
+/sbin/modprobe v4l1_compat -- only include this line if your kernel version is below 2.6.38, use 'uname -a' to find out your kernel version
+/sbin/modprobe videodev
+/sbin/insmod <installation folder>/andor/bitflow/drv/bitflow.ko fwDelay1=200
+chmod a+rw /dev/video*
+
+Add the 'nopat' kernel option to your boot loader.
+(You can find out how to do this in your linux distribution help section)
+

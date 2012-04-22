@@ -1,0 +1,13 @@
+2012-04-21  Pariksheet Nanda <p.nanda@andor.com>
+
+	* Started to replace `install_andor' script with more portable and
+	  package-manager friendly autotools files
+	* Added new files: Makefile.am, x86/Makefile.am, x86_64/Makefile.am,
+	  configure.ac
+	* Differences with install_andor:
+		* udev rules and hotplug script installation are now
+		  conditional, set by configure arguments
+		* filename changes and additions for automake compliance
+			ReleaseNotes.txt -> NEWS
+			doc/BitflowManualConfig.txt -> README
+			created ChangeLog
