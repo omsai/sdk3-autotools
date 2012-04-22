@@ -1,6 +1,7 @@
 2012-04-22  Pariksheet Nanda <p.nanda@andor.com>
 
 	* Makefiles honor $(DISTDIR)
+	* Makefiles use $(INSTALL_*) instead of cp
 
 2012-04-21  Pariksheet Nanda <p.nanda@andor.com>
 
