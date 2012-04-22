@@ -1,3 +1,7 @@
+2012-04-22  Pariksheet Nanda <p.nanda@andor.com>
+
+	* Makefiles honor $(DISTDIR)
+
 2012-04-21  Pariksheet Nanda <p.nanda@andor.com>
 
 	* Started to replace `install_andor' script with more portable and
