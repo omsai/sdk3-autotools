@@ -2,7 +2,8 @@
 
 install-exec-am:
 	test -z $(DESTDIR)$(sbindir) || $(mkinstalldirs) $(DESTDIR)$(sbindir)
-	cp -p update_scmos_firmware.$(VERSION) $(DESTDIR)$(sbindir)
+	$(INSTALL_PROGRAM) update_scmos_firmware.$(VERSION) $(DESTDIR)$(sbindir)
 
+install-data-am:
 	test -z $(DESTDIR)$(libdir) || $(mkinstalldirs) $(DESTDIR)$(libdir)
-	cp -p lib* $(DESTDIR)$(libdir)
+	$(INSTALL_DATA) lib* $(DESTDIR)$(libdir)
