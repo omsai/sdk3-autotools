@@ -3,7 +3,7 @@
 SUBDIRS = $(HOST_ARCH) #bitflow
 DIST_SUBDIRS = x86 x86_64 #bitflow
 
-include_HEADERS = inc/atmcdLXd.h inc/atcore.h
+include_HEADERS = inc/atcore.h
 
 sysconf_DATA = etc/andor_sdk.conf
 
